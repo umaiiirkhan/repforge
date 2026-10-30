@@ -1,0 +1,24 @@
+Selected model: Logistic Regression
+
+                    precision    recall  f1-score   support
+
+  beginner_workout       0.87      1.00      0.93        13
+  bot_capabilities       0.82      0.75      0.78        12
+exercise_technique       0.87      0.87      0.87        15
+          fat_loss       0.77      0.91      0.83        11
+           goodbye       0.77      0.91      0.83        11
+          greeting       1.00      0.86      0.92        14
+         hydration       1.00      0.89      0.94         9
+    medical_injury       0.89      0.67      0.76        12
+        motivation       0.55      0.60      0.57        10
+       muscle_gain       0.69      0.75      0.72        12
+ nutrition_general       0.92      0.92      0.92        12
+      out_of_scope       0.58      0.58      0.58        12
+     recovery_rest       0.75      0.82      0.78        11
+            thanks       1.00      0.92      0.96        12
+   warmup_cooldown       1.00      0.90      0.95        10
+
+          accuracy                           0.82       176
+         macro avg       0.83      0.82      0.82       176
+      weighted avg       0.83      0.82      0.83       176
+

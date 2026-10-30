@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RepForge Assistant · AI Gym Training Assistant</title>
+  <meta name="description" content="AI-powered gym training chatbot built with Python, Scikit-learn and Flask.">
+  <!-- Brand fonts; style.css falls back to system fonts when offline -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e31c25' stroke-width='2.4' stroke-linecap='round'><path d='m6.5 6.5 11 11M21 21l-1-1M3 3l1 1m14 18 4-4M2 6l4-4M3 10l7-7m4 18 7-7'/></svg>">
+</head>
+<body>
+  <!-- Icon sprite (Lucide-style line icons). Used as <svg class="icon"><use href="#i-NAME"/></svg>;
+       bot replies reference them with {icon:NAME} tokens rendered by script.js. -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="i-dumbbell" viewBox="0 0 24 24"><path d="m6.5 6.5 11 11"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v5h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01"/><path d="M15 9h.01"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0v5"/><path d="M14 10V4a2 2 0 0 0-4 0v6"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M17 21v-8H7v8"/><path d="M7 3v5h8"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
+    <symbol id="i-trending" viewBox="0 0 24 24"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></symbol>
+    <symbol id="i-apple" viewBox="0 0 24 24"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/><path d="M10 2c1 .5 2 2 2 5"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  </svg>
+
+  <div class="app">
+    <!-- ============ Chat column ============ -->
+    <main class="chat" aria-label="Chat with RepForge Assistant">
+      <header class="chat-header">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M2 10h2V8h2v8H4v-2H2v-4zm4-3h3v10H6V7zm3 4h6v2H9v-2zm6-4h3v10h-3V7zm3 1h2v2h2v4h-2v2h-2V8z"/></svg>
+          </div>
+          <div>
+            <h1>RepForge <span class="accent-word">Assistant</span></h1>
+            <p class="status"><span class="dot"></span>Powered by GymBot AI · runs locally</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <label class="toggle" title="Show the machine-learning prediction for each reply">
+            <input type="checkbox" id="debugToggle">
+            <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            <span class="toggle-label">AI details</span>
+          </label>
+          <button class="icon-btn" id="resetBtn" title="New conversation" aria-label="New conversation">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg>
+          </button>
+          <button class="icon-btn panel-toggle" id="panelBtn" title="Progress log" aria-label="Open progress log">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M3 13h2v8H3v-8zm4-6h2v14H7V7zm4 3h2v11h-2V10zm4-7h2v18h-2V3zm4 9h2v9h-2v-9z"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="messages" id="messages" role="log" aria-live="polite">
+        <section class="welcome" id="welcome">
+          <div class="welcome-icon" aria-hidden="true"><svg class="icon"><use href="#i-dumbbell"/></svg></div>
+          <p class="eyebrow">RepForge AI Trainer</p>
+          <h2>Get Your Body In <span class="accent-word">Shape</span></h2>
+          <p>Ask about exercise form, get a workout plan, or learn the basics of recovery and nutrition.</p>
+          <div class="topic-grid">
+            <button class="topic" data-msg="How do I do a squat?"><span><svg class="icon"><use href="#i-activity"/></svg></span><strong>Exercise form</strong><small>Step-by-step technique</small></button>
+            <button class="topic" data-msg="Make me a workout plan"><span><svg class="icon"><use href="#i-calendar"/></svg></span><strong>Workout plan</strong><small>Built for your schedule</small></button>
+            <button class="topic" data-msg="How do I build muscle?"><span><svg class="icon"><use href="#i-zap"/></svg></span><strong>Build muscle</strong><small>Key training principles</small></button>
+            <button class="topic" data-msg="How much protein do I need?"><span><svg class="icon"><use href="#i-apple"/></svg></span><strong>Nutrition</strong><small>General eating basics</small></button>
+          </div>
+        </section>
+      </div>
+
+      <div class="quick-replies" id="quickReplies" aria-label="Suggested replies"></div>
+
+      <form class="composer" id="chatForm" autocomplete="off">
+        <input id="messageInput" type="text" maxlength="500" placeholder="Ask me anything about training…" aria-label="Your message">
+        <button type="submit" id="sendBtn" aria-label="Send">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3.4 20.4 21 12 3.4 3.6 3.4 10l12.6 2-12.6 2z"/></svg>
+        </button>
+      </form>
+      <p class="disclaimer">General fitness information only, not medical advice. Consult a professional for injuries or health conditions.</p>
+    </main>
+
+    <!-- ============ Progress panel ============ -->
+    <aside class="panel" id="panel" aria-label="Progress log">
+      <div class="panel-header">
+        <h2>Progress Log</h2>
+        <button class="icon-btn panel-close" id="panelClose" aria-label="Close panel"><svg class="icon"><use href="#i-x"/></svg></button>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><span id="statSessions">0</span><small>Sessions</small></div>
+        <div class="stat"><span id="statWeek">0</span><small>Last 7 days</small></div>
+        <div class="stat"><span id="statMinutes">0</span><small>Minutes</small></div>
+      </div>
+
+      <form class="log-form" id="logForm">
+        <h3>Log a workout</h3>
+        <label>Workout
+          <input id="logWorkout" type="text" maxlength="80" placeholder="e.g. Full Body A" required>
+        </label>
+        <div class="row">
+          <label>Minutes
+            <input id="logDuration" type="number" min="1" max="600" value="45" required>
+          </label>
+          <label>Date
+            <input id="logDate" type="date" required>
+          </label>
+        </div>
+        <label><span>Notes <span class="optional">(optional)</span></span>
+          <input id="logNotes" type="text" maxlength="300" placeholder="How did it feel?">
+        </label>
+        <button type="submit" class="primary-btn">Add session</button>
+        <p class="form-msg" id="logMsg" role="status"></p>
+      </form>
+
+      <div class="log-list-wrap">
+        <h3>Recent sessions</h3>
+        <ul class="log-list" id="logList"></ul>
+      </div>
+
+      <button class="danger-link" id="deleteDataBtn">Delete all my saved data</button>
+      <p class="privacy">Stored locally with an anonymous ID. No account or personal details.</p>
+    </aside>
+    <div class="backdrop" id="backdrop"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

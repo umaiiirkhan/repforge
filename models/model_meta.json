@@ -1,0 +1,23 @@
+{
+  "model": "Logistic Regression",
+  "classes": [
+    "beginner_workout",
+    "bot_capabilities",
+    "exercise_technique",
+    "fat_loss",
+    "goodbye",
+    "greeting",
+    "hydration",
+    "medical_injury",
+    "motivation",
+    "muscle_gain",
+    "nutrition_general",
+    "out_of_scope",
+    "recovery_rest",
+    "thanks",
+    "warmup_cooldown"
+  ],
+  "trained_on_examples": 896,
+  "test_accuracy": 0.8238636363636364,
+  "test_macro_f1": 0.8232399360260446
+}

@@ -1,0 +1,207 @@
+{
+  "selected_model": "Logistic Regression",
+  "cross_validation_macro_f1": {
+    "Logistic Regression": {
+      "mean": 0.7900593247417047,
+      "std": 0.005054744822612171
+    },
+    "Linear SVM (calibrated)": {
+      "mean": 0.7836634887763707,
+      "std": 0.010771545942015555
+    },
+    "Complement Naive Bayes": {
+      "mean": 0.7654372140305913,
+      "std": 0.021309632844636557
+    }
+  },
+  "test_set": {
+    "size": 176,
+    "accuracy": 0.8238636363636364,
+    "macro_precision": 0.831108521108521,
+    "macro_recall": 0.8221596921596921,
+    "macro_f1": 0.8232399360260446,
+    "confidence_threshold": 0.4,
+    "coverage_at_threshold": 0.8352272727272727,
+    "accuracy_when_confident": 0.8979591836734694
+  },
+  "dataset": {
+    "intents": 15,
+    "examples": 896,
+    "per_intent": {
+      "greeting": 67,
+      "goodbye": 61,
+      "thanks": 59,
+      "bot_capabilities": 60,
+      "exercise_technique": 74,
+      "beginner_workout": 66,
+      "muscle_gain": 60,
+      "fat_loss": 60,
+      "recovery_rest": 59,
+      "nutrition_general": 60,
+      "hydration": 50,
+      "warmup_cooldown": 50,
+      "motivation": 50,
+      "medical_injury": 60,
+      "out_of_scope": 60
+    },
+    "train_size": 720,
+    "near_duplicates_moved": 4
+  },
+  "misclassified_examples": [
+    {
+      "text": "i stopped working out for months",
+      "true": "motivation",
+      "predicted": "beginner_workout"
+    },
+    {
+      "text": "inspire me",
+      "true": "motivation",
+      "predicted": "out_of_scope"
+    },
+    {
+      "text": "is it going to rain",
+      "true": "out_of_scope",
+      "predicted": "motivation"
+    },
+    {
+      "text": "how to get back into the gym",
+      "true": "motivation",
+      "predicted": "fat_loss"
+    },
+    {
+      "text": "menu",
+      "true": "bot_capabilities",
+      "predicted": "out_of_scope"
+    },
+    {
+      "text": "i need help",
+      "true": "bot_capabilities",
+      "predicted": "motivation"
+    },
+    {
+      "text": "how many sets should i do for growth",
+      "true": "muscle_gain",
+      "predicted": "recovery_rest"
+    },
+    {
+      "text": "good day",
+      "true": "greeting",
+      "predicted": "goodbye"
+    },
+    {
+      "text": "how should i breathe when lifting",
+      "true": "exercise_technique",
+      "predicted": "medical_injury"
+    },
+    {
+      "text": "is milk good after workout",
+      "true": "nutrition_general",
+      "predicted": "recovery_rest"
+    },
+    {
+      "text": "guide me",
+      "true": "bot_capabilities",
+      "predicted": "exercise_technique"
+    },
+    {
+      "text": "what's a good car",
+      "true": "out_of_scope",
+      "predicted": "nutrition_general"
+    },
+    {
+      "text": "how to reduce muscle soreness",
+      "true": "recovery_rest",
+      "predicted": "muscle_gain"
+    },
+    {
+      "text": "sing a song",
+      "true": "out_of_scope",
+      "predicted": "motivation"
+    },
+    {
+      "text": "recommend a movie",
+      "true": "out_of_scope",
+      "predicted": "beginner_workout"
+    },
+    {
+      "text": "how to get more flexible",
+      "true": "warmup_cooldown",
+      "predicted": "fat_loss"
+    },
+    {
+      "text": "what's the right grip for bench",
+      "true": "exercise_technique",
+      "predicted": "out_of_scope"
+    },
+    {
+      "text": "my arm is numb",
+      "true": "medical_injury",
+      "predicted": "out_of_scope"
+    },
+    {
+      "text": "good to see you",
+      "true": "greeting",
+      "predicted": "goodbye"
+    },
+    {
+      "text": "cheers",
+      "true": "thanks",
+      "predicted": "goodbye"
+    },
+    {
+      "text": "how to put on size",
+      "true": "muscle_gain",
+      "predicted": "motivation"
+    },
+    {
+      "text": "tell me about history",
+      "true": "out_of_scope",
+      "predicted": "bot_capabilities"
+    },
+    {
+      "text": "can i train the same muscle two days in a row",
+      "true": "recovery_rest",
+      "predicted": "muscle_gain"
+    },
+    {
+      "text": "i pulled a muscle",
+      "true": "medical_injury",
+      "predicted": "muscle_gain"
+    },
+    {
+      "text": "i'm lazy how do i start",
+      "true": "motivation",
+      "predicted": "bot_capabilities"
+    },
+    {
+      "text": "is juice ok after workout",
+      "true": "hydration",
+      "predicted": "recovery_rest"
+    },
+    {
+      "text": "i fainted at the gym",
+      "true": "medical_injury",
+      "predicted": "motivation"
+    },
+    {
+      "text": "how to get abs",
+      "true": "muscle_gain",
+      "predicted": "fat_loss"
+    },
+    {
+      "text": "my muscles are cramping badly and swelling",
+      "true": "medical_injury",
+      "predicted": "muscle_gain"
+    },
+    {
+      "text": "farewell",
+      "true": "goodbye",
+      "predicted": "out_of_scope"
+    },
+    {
+      "text": "how do i diet",
+      "true": "fat_loss",
+      "predicted": "exercise_technique"
+    }
+  ]
+}

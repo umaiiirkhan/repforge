@@ -1,0 +1,344 @@
+{
+  "exercises": [
+    {
+      "id": "push_up",
+      "name": "Push-Up",
+      "synonyms": ["push up", "push-up", "pushup", "push ups", "pushups", "press up", "press-up", "pressup"],
+      "muscles": ["chest", "shoulders (front)", "triceps", "core"],
+      "equipment": "none",
+      "level": "beginner",
+      "steps": [
+        "Place your hands slightly wider than shoulder-width, directly under your shoulders.",
+        "Extend your legs back so your body forms a straight line from head to heels.",
+        "Brace your core and squeeze your glutes.",
+        "Lower your chest toward the floor, keeping elbows at about 45° from your body.",
+        "Push back up until your arms are straight, without locking the elbows hard."
+      ],
+      "mistakes": ["Hips sagging or piking up", "Elbows flared out to 90°", "Half reps that don't lower the chest", "Head dropping forward"],
+      "safety": "Too hard? Do them with hands on a bench or wall, or from your knees. Stop if you feel wrist or shoulder pain."
+    },
+    {
+      "id": "squat",
+      "name": "Bodyweight Squat",
+      "synonyms": ["squat", "squats", "bodyweight squat", "air squat", "back squat", "barbell squat"],
+      "muscles": ["quadriceps", "glutes", "hamstrings", "core"],
+      "equipment": "none (or barbell)",
+      "level": "beginner",
+      "steps": [
+        "Stand with feet about shoulder-width apart, toes turned out slightly.",
+        "Brace your core and keep your chest up.",
+        "Push your hips back and bend your knees as if sitting into a chair.",
+        "Keep your knees tracking in line with your toes and heels flat on the floor.",
+        "Lower until thighs are around parallel (or as deep as you can with good form), then drive up through your whole foot."
+      ],
+      "mistakes": ["Knees caving inward", "Heels lifting off the floor", "Rounding the lower back", "Leaning too far forward"],
+      "safety": "Master bodyweight squats before adding a barbell. Use a box behind you to learn depth. Stop if you feel knee or back pain."
+    },
+    {
+      "id": "goblet_squat",
+      "name": "Goblet Squat",
+      "synonyms": ["goblet squat", "goblet squats", "dumbbell squat", "kettlebell squat"],
+      "muscles": ["quadriceps", "glutes", "core", "upper back"],
+      "equipment": "dumbbell or kettlebell",
+      "level": "beginner",
+      "steps": [
+        "Hold one dumbbell vertically against your chest with both hands.",
+        "Stand with feet slightly wider than shoulder-width, toes slightly out.",
+        "Keep elbows pointing down and chest tall.",
+        "Squat down between your legs, pushing knees out over your toes.",
+        "Pause at the bottom, then stand up by driving through your feet."
+      ],
+      "mistakes": ["Letting the weight pull you forward", "Knees caving in", "Rushing the bottom position"],
+      "safety": "Start light. This is a great way to learn squat technique before using a barbell."
+    },
+    {
+      "id": "lunge",
+      "name": "Lunge",
+      "synonyms": ["lunge", "lunges", "forward lunge", "reverse lunge", "walking lunge", "walking lunges", "split squat"],
+      "muscles": ["quadriceps", "glutes", "hamstrings", "balance and stability"],
+      "equipment": "none (dumbbells optional)",
+      "level": "beginner",
+      "steps": [
+        "Stand tall with feet hip-width apart.",
+        "Step forward (or backward for a reverse lunge) with one leg.",
+        "Lower your hips until both knees are bent about 90°, with the back knee hovering just above the floor.",
+        "Keep your front knee over your ankle, not pushed far past the toes or caving in.",
+        "Push through the front heel to return to standing, then switch legs."
+      ],
+      "mistakes": ["Short steps that overload the front knee", "Torso leaning forward heavily", "Front knee collapsing inward"],
+      "safety": "Reverse lunges are usually easier on the knees for beginners. Hold onto support for balance if needed."
+    },
+    {
+      "id": "plank",
+      "name": "Plank",
+      "synonyms": ["plank", "planks", "front plank", "forearm plank", "elbow plank"],
+      "muscles": ["core (abs and obliques)", "shoulders", "glutes"],
+      "equipment": "none",
+      "level": "beginner",
+      "steps": [
+        "Place forearms on the floor with elbows directly under shoulders.",
+        "Extend legs back, resting on your toes.",
+        "Form a straight line from head to heels.",
+        "Brace your abs, squeeze your glutes, and breathe steadily.",
+        "Hold for 20–30 seconds to start, building up over time."
+      ],
+      "mistakes": ["Hips sagging toward the floor", "Hips raised too high", "Holding your breath", "Looking up and straining the neck"],
+      "safety": "Quality beats duration. End the set when your form breaks. Do it from your knees if needed."
+    },
+    {
+      "id": "glute_bridge",
+      "name": "Glute Bridge",
+      "synonyms": ["glute bridge", "glute bridges", "bridge", "hip bridge", "hip thrust", "hip thrusts"],
+      "muscles": ["glutes", "hamstrings", "lower back (support)"],
+      "equipment": "none (barbell optional for hip thrusts)",
+      "level": "beginner",
+      "steps": [
+        "Lie on your back with knees bent and feet flat, hip-width apart.",
+        "Keep arms by your sides, palms down.",
+        "Brace your core and push through your heels to lift your hips.",
+        "Squeeze your glutes at the top so your body forms a straight line from shoulders to knees.",
+        "Lower slowly with control."
+      ],
+      "mistakes": ["Over-arching the lower back at the top", "Pushing through the toes", "Not squeezing the glutes"],
+      "safety": "Keep the movement controlled. If you feel it mostly in your lower back, tuck your ribs down and focus on the glutes."
+    },
+    {
+      "id": "deadlift",
+      "name": "Deadlift",
+      "synonyms": ["deadlift", "deadlifts", "dead lift", "conventional deadlift", "barbell deadlift"],
+      "muscles": ["hamstrings", "glutes", "lower and upper back", "grip", "core"],
+      "equipment": "barbell (or dumbbells/kettlebell)",
+      "level": "intermediate",
+      "steps": [
+        "Stand with feet hip-width apart, bar over the middle of your feet.",
+        "Hinge at the hips and grip the bar just outside your legs.",
+        "Lower your hips, flatten your back, chest up, shoulders slightly over the bar.",
+        "Brace your core hard, then push the floor away and stand up, keeping the bar close to your legs.",
+        "Lock out by squeezing glutes, then lower by hinging at the hips first, then bending the knees."
+      ],
+      "mistakes": ["Rounding the lower back", "Bar drifting away from the body", "Jerking the bar off the floor", "Leaning back excessively at the top"],
+      "safety": "Learn it with light weight or a coach first. A rounded back under load is a common cause of injury. Stop if you feel back pain."
+    },
+    {
+      "id": "romanian_deadlift",
+      "name": "Romanian Deadlift (RDL)",
+      "synonyms": ["romanian deadlift", "romanian deadlifts", "rdl", "rdls", "stiff leg deadlift", "dumbbell rdl"],
+      "muscles": ["hamstrings", "glutes", "lower back"],
+      "equipment": "dumbbells or barbell",
+      "level": "beginner",
+      "steps": [
+        "Stand holding the weights in front of your thighs, knees softly bent.",
+        "Push your hips back, sliding the weights down the front of your legs.",
+        "Keep your back flat and the weights close to your body.",
+        "Lower until you feel a stretch in your hamstrings (usually mid-shin).",
+        "Drive your hips forward to return to standing."
+      ],
+      "mistakes": ["Rounding the back to reach lower", "Bending the knees too much (turning it into a squat)", "Weights drifting forward"],
+      "safety": "Range of motion depends on hamstring flexibility. Don't force depth with a rounded back."
+    },
+    {
+      "id": "bench_press",
+      "name": "Bench Press",
+      "synonyms": ["bench press", "bench", "benching", "barbell bench", "dumbbell bench press", "chest press", "flat bench"],
+      "muscles": ["chest", "front shoulders", "triceps"],
+      "equipment": "barbell or dumbbells + bench",
+      "level": "beginner",
+      "steps": [
+        "Lie on the bench with eyes under the bar and feet flat on the floor.",
+        "Grip slightly wider than shoulder-width; pull shoulder blades back and down.",
+        "Unrack the bar and hold it over your shoulders with straight arms.",
+        "Lower it under control to your mid-chest with elbows at about 45–70° from your body.",
+        "Press back up to the starting position."
+      ],
+      "mistakes": ["Bouncing the bar off the chest", "Elbows flared to 90°", "Lifting hips off the bench", "Wrists bent far back"],
+      "safety": "Always use a spotter or safety arms when using a barbell, especially with heavier weights. Dumbbells are a safer way to start."
+    },
+    {
+      "id": "shoulder_press",
+      "name": "Overhead Shoulder Press",
+      "synonyms": ["shoulder press", "overhead press", "military press", "ohp", "dumbbell shoulder press", "press overhead"],
+      "muscles": ["shoulders", "triceps", "upper chest", "core"],
+      "equipment": "dumbbells or barbell",
+      "level": "beginner",
+      "steps": [
+        "Stand (or sit) tall holding weights at shoulder height, palms forward.",
+        "Brace your core and squeeze your glutes to avoid arching your back.",
+        "Press the weights straight overhead until arms are extended.",
+        "Keep your head neutral, moving it slightly back as the bar passes.",
+        "Lower under control back to shoulder height."
+      ],
+      "mistakes": ["Excessive lower-back arch", "Pressing forward instead of straight up", "Using leg drive unintentionally"],
+      "safety": "Start light. Stop if you feel pinching in the shoulder."
+    },
+    {
+      "id": "pull_up",
+      "name": "Pull-Up",
+      "synonyms": ["pull up", "pull-up", "pullup", "pull ups", "pullups", "chin up", "chin-up", "chinup", "chin ups"],
+      "muscles": ["lats", "upper back", "biceps", "grip"],
+      "equipment": "pull-up bar",
+      "level": "intermediate",
+      "steps": [
+        "Hang from the bar with hands slightly wider than shoulder-width, palms facing away.",
+        "Pull your shoulder blades down and back to start the movement.",
+        "Pull yourself up by driving elbows toward your hips until your chin passes the bar.",
+        "Keep your body controlled; avoid swinging.",
+        "Lower slowly to a full hang."
+      ],
+      "mistakes": ["Kipping or swinging", "Half reps", "Shrugging shoulders up to the ears"],
+      "safety": "Can't do one yet? Use resistance bands, an assisted machine, lat pulldowns, or slow negatives (jump up, lower slowly)."
+    },
+    {
+      "id": "lat_pulldown",
+      "name": "Lat Pulldown",
+      "synonyms": ["lat pulldown", "lat pull down", "pulldown", "pull down", "lat pulldowns"],
+      "muscles": ["lats", "upper back", "biceps"],
+      "equipment": "cable machine",
+      "level": "beginner",
+      "steps": [
+        "Sit with thighs secured under the pads and grip the bar wider than shoulder-width.",
+        "Lean back slightly with chest up.",
+        "Pull the bar down to your upper chest, driving elbows down and back.",
+        "Squeeze your shoulder blades together at the bottom.",
+        "Let the bar rise slowly until arms are straight."
+      ],
+      "mistakes": ["Pulling behind the neck", "Leaning back too far and using momentum", "Using only the arms"],
+      "safety": "Control the weight up and down. Always pull to the front of your body."
+    },
+    {
+      "id": "row",
+      "name": "Dumbbell Row",
+      "synonyms": ["row", "rows", "dumbbell row", "dumbbell rows", "bent over row", "barbell row", "one arm row", "seated row", "cable row"],
+      "muscles": ["upper back", "lats", "rear shoulders", "biceps"],
+      "equipment": "dumbbell + bench (or cable/barbell)",
+      "level": "beginner",
+      "steps": [
+        "Place one knee and hand on a bench, back flat and parallel to the floor.",
+        "Hold a dumbbell in the other hand with arm extended.",
+        "Pull the dumbbell toward your hip, keeping the elbow close to your body.",
+        "Squeeze your shoulder blade at the top.",
+        "Lower under control and repeat, then switch sides."
+      ],
+      "mistakes": ["Rounding the back", "Twisting the torso to lift the weight", "Pulling toward the shoulder instead of the hip"],
+      "safety": "Keep your spine neutral. Use a weight you can control without jerking."
+    },
+    {
+      "id": "bicep_curl",
+      "name": "Bicep Curl",
+      "synonyms": ["bicep curl", "bicep curls", "biceps curl", "curl", "curls", "dumbbell curl", "hammer curl", "hammer curls"],
+      "muscles": ["biceps", "forearms"],
+      "equipment": "dumbbells or barbell",
+      "level": "beginner",
+      "steps": [
+        "Stand holding dumbbells at your sides, palms facing forward.",
+        "Keep your elbows pinned close to your torso.",
+        "Curl the weights up toward your shoulders by bending at the elbow.",
+        "Squeeze your biceps at the top.",
+        "Lower slowly to full arm extension."
+      ],
+      "mistakes": ["Swinging the body for momentum", "Elbows moving forward", "Cutting the range of motion short"],
+      "safety": "Choose a weight you can lift without swinging. Stop if you feel elbow pain."
+    },
+    {
+      "id": "dips",
+      "name": "Dips",
+      "synonyms": ["dip", "dips", "tricep dips", "bench dips", "parallel bar dips"],
+      "muscles": ["triceps", "chest", "front shoulders"],
+      "equipment": "parallel bars or bench",
+      "level": "intermediate",
+      "steps": [
+        "Support yourself on parallel bars with arms straight and shoulders down.",
+        "Lean slightly forward and keep your core tight.",
+        "Lower by bending your elbows until upper arms are about parallel to the floor.",
+        "Keep shoulders away from your ears.",
+        "Push back up to straight arms."
+      ],
+      "mistakes": ["Going too deep and straining the shoulders", "Shrugging the shoulders", "Flaring elbows excessively"],
+      "safety": "Beginners can start with bench dips (feet on floor) or an assisted dip machine. Stop if you feel pain in the front of the shoulder."
+    },
+    {
+      "id": "burpee",
+      "name": "Burpee",
+      "synonyms": ["burpee", "burpees"],
+      "muscles": ["full body", "legs", "chest", "shoulders", "cardiovascular system"],
+      "equipment": "none",
+      "level": "beginner",
+      "steps": [
+        "Stand with feet shoulder-width apart.",
+        "Squat down and place your hands on the floor.",
+        "Jump or step your feet back into a plank position.",
+        "(Optional) Perform a push-up.",
+        "Jump or step your feet back toward your hands, then stand or jump up with arms overhead."
+      ],
+      "mistakes": ["Sagging hips in the plank", "Landing heavily", "Sacrificing form for speed"],
+      "safety": "Step back instead of jumping to make it low-impact. Pace yourself; burpees raise heart rate quickly."
+    },
+    {
+      "id": "mountain_climber",
+      "name": "Mountain Climber",
+      "synonyms": ["mountain climber", "mountain climbers"],
+      "muscles": ["core", "shoulders", "hip flexors", "cardiovascular system"],
+      "equipment": "none",
+      "level": "beginner",
+      "steps": [
+        "Start in a high plank with hands under shoulders.",
+        "Brace your core and keep your hips level.",
+        "Drive one knee toward your chest.",
+        "Quickly switch legs, like running in place.",
+        "Keep a steady rhythm while maintaining a straight back."
+      ],
+      "mistakes": ["Hips bouncing up and down", "Shoulders drifting behind the hands", "Going so fast that form breaks"],
+      "safety": "Slow the tempo down if you lose control of your plank position."
+    },
+    {
+      "id": "crunch",
+      "name": "Crunch",
+      "synonyms": ["crunch", "crunches", "sit up", "sit-up", "situps", "sit ups", "ab crunch"],
+      "muscles": ["abdominals (rectus abdominis)"],
+      "equipment": "none",
+      "level": "beginner",
+      "steps": [
+        "Lie on your back with knees bent and feet flat on the floor.",
+        "Place fingertips lightly behind your ears or cross arms on your chest.",
+        "Exhale and curl your shoulders off the floor using your abs.",
+        "Pause briefly at the top.",
+        "Lower slowly with control."
+      ],
+      "mistakes": ["Pulling on the neck with your hands", "Using momentum", "Lifting all the way up with the hip flexors"],
+      "safety": "Keep your neck relaxed. Planks and dead bugs are good alternatives if crunches bother your neck or back."
+    },
+    {
+      "id": "jumping_jack",
+      "name": "Jumping Jacks",
+      "synonyms": ["jumping jack", "jumping jacks", "star jumps"],
+      "muscles": ["full body", "calves", "shoulders", "cardiovascular system"],
+      "equipment": "none",
+      "level": "beginner",
+      "steps": [
+        "Stand with feet together and arms at your sides.",
+        "Jump while spreading your feet wider than your hips and raising your arms overhead.",
+        "Jump back to the starting position.",
+        "Land softly on the balls of your feet.",
+        "Repeat at a steady pace."
+      ],
+      "mistakes": ["Landing flat-footed and heavy", "Locking knees on landing"],
+      "safety": "For a low-impact version, step one foot out at a time instead of jumping."
+    },
+    {
+      "id": "wall_sit",
+      "name": "Wall Sit",
+      "synonyms": ["wall sit", "wall sits", "wall squat"],
+      "muscles": ["quadriceps", "glutes", "calves"],
+      "equipment": "wall",
+      "level": "beginner",
+      "steps": [
+        "Stand with your back flat against a wall.",
+        "Walk your feet forward about two feet.",
+        "Slide down until your knees are bent around 90°.",
+        "Keep knees over ankles and back flat against the wall.",
+        "Hold for 20–45 seconds, breathing steadily."
+      ],
+      "mistakes": ["Knees going past the toes", "Holding the breath", "Hands pushing on the thighs"],
+      "safety": "Hold a higher position (less knee bend) if 90° is too difficult or uncomfortable."
+    }
+  ]
+}
