@@ -8,13 +8,26 @@ workout log.
 
 ## 1. Setup and run
 
-**Prerequisites:** Python 3.10 or newer, plus internet for the first install.
+**Prerequisites:** Python 3.10 or newer (download from https://www.python.org/downloads/;
+on Windows tick **"Add python.exe to PATH"** during install), plus internet for the first install.
 You do *not* need Node.js, a database server or anything else. The database is SQLite, which comes with Python.
+Check your version with `python3 --version` (Windows: `py --version`).
 
+### Get the project
+- **From GitHub:**
+  ```bash
+  git clone https://github.com/umaiiirkhan/repforge.git
+  cd repforge
+  ```
+- **From a zip:** extract it, then open a terminal *inside* the extracted folder
+  (the one containing `app.py`).
+
+All commands below are run from inside that project folder.
+
+### Install and run
 **Linux / macOS**
 ```bash
 sudo apt install python3-venv          # Ubuntu/Debian only, once
-cd AI_Gym_Training_Bot
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -25,7 +38,6 @@ python app.py                          # open http://127.0.0.1:5000
 
 **Windows (PowerShell)**
 ```powershell
-cd AI_Gym_Training_Bot
 py -m venv .venv
 .venv\Scripts\Activate.ps1             # if blocked: Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 pip install -r requirements.txt
@@ -35,6 +47,10 @@ python app.py
 ```
 
 Stop the server with **Ctrl+C**. Next time, just activate the venv and run `python app.py`.
+
+> **Run training before the tests.** The chatbot tests load the trained model
+> (`models/intent_pipeline.joblib`), which is not in the repo. `python train_model.py` creates it in about 30 seconds.
+> The first `pip install` downloads about 100 MB, so it can take a while on a slow connection.
 
 ---
 

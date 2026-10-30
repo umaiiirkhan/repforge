@@ -33,9 +33,12 @@ A Python virtual fitness assistant that uses **Natural Language Processing** and
 
 ## 🚀 Setup & Run
 
+> Full step-by-step guide (Windows/Linux/macOS, troubleshooting, how to extend the model): **[INSTRUCTIONS.md](INSTRUCTIONS.md)**
+
 ```bash
-# 1. Open a terminal in the project folder
-cd AI_Gym_Training_Bot
+# 1. Get the project and open a terminal in its folder
+git clone https://github.com/umaiiirkhan/repforge.git
+cd repforge
 
 # 2. Create and activate a virtual environment
 python -m venv .venv
